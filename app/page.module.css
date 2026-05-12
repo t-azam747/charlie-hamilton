@@ -1,0 +1,302 @@
+/* Page Module CSS for The Connaught replication */
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 13, 13, 0.1) 0%,
+    rgba(13, 13, 13, 0.5) 100%
+  );
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--space-32) var(--space-8);
+}
+.hero-content h1 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: var(--text-hero);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-8);
+}
+
+/* Branded Feature Section */
+.branded-feature {
+  text-align: center;
+  padding: var(--space-32) var(--space-8);
+}
+.branded-feature h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-charcoal);
+}
+.branded-feature p {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-mid);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Fixed Scroll Section (for Legacy of Comfort) */
+.fixed-scroll {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh; /* Ensure section covers viewport for fixed background */
+}
+.fixed-scroll::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://library.maybourne.com/transform/43cce20a-a584-4275-b62d-f18fc5ddea43/CON-TERRACE-SUITE-01-jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+.fixed-scroll-content {
+  position: relative;
+  z-index: 1;
+  background: rgba(248, 244, 238, 0.9); /* ivory with slight opacity */
+  padding: var(--space-32) var(--space-8);
+  text-align: center;
+}
+.fixed-scroll-content h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-charcoal);
+}
+.fixed-scroll-content p {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-mid);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Parallax Section */
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+.parallax-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: -2;
+}
+.parallax-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 13, 13, 0.35);
+  z-index: -1;
+}
+.parallax-content {
+  position: relative;
+  z-index: 2;
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--space-32) var(--space-8);
+}
+.parallax-content h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-white);
+}
+.parallax-content p {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-cream);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Tile Block Section (Restaurants & Bars) */
+.tile-block {
+  padding: var(--space-32) var(--space-8);
+}
+.tile-block h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--text-3xl);
+  text-align: center;
+  margin-bottom: var(--space-24);
+  color: var(--color-charcoal);
+}
+.tiles {
+  display: grid;
+  gap: var(--space-16);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  min-height: 350px;
+}
+.tile img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tile:hover img {
+  transform: scale(1.06);
+}
+.tile-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-8);
+  background: linear-gradient(
+    to top,
+    rgba(13, 13, 13, 0.6) 0%,
+    transparent 100%
+  );
+  color: var(--color-white);
+}
+.tile-content h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-4);
+}
+.tile-content p {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+/* Split Content Section */
+.split-content {
+  position: relative;
+  display: grid;
+  gap: var(--space-16);
+  align-items: center;
+  padding: var(--space-32) var(--space-8);
+  min-height: 400px;
+}
+.split-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.split-content .text {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-mid);
+}
+.split-content .text p {
+  margin-bottom: var(--space-8);
+}
+@media (min-width: 768px) {
+  .split-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Newsletter Section */
+.newsletter {
+  text-align: center;
+  padding: var(--space-32) var(--space-8);
+  background-color: var(--color-ivory);
+}
+.newsletter h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-charcoal);
+}
+.newsletter p {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-mid);
+  max-width: 540px;
+  margin: 0 auto;
+  margin-bottom: var(--space-16);
+}
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  justify-content: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.newsletter-form input {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: var(--text-base);
+  padding: var(--space-4) var(--space-8);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  border-radius: 4px;
+  flex: 1 1 200px;
+}
+.newsletter-form button {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: var(--space-4) var(--space-8);
+  border: 1px solid var(--color-charcoal);
+  background: var(--color-charcoal);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background var(--transition-base), color var(--transition-base);
+  border-radius: 4px;
+}
+.newsletter-form button:hover {
+  background: var(--color-white);
+  color: var(--color-charcoal);
+}
