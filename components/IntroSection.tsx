@@ -26,7 +26,7 @@ export default function IntroSection() {
         padding:    'clamp(5rem, 10vw, 9rem) 0',
         overflow:   'hidden',
       }}
-      aria-label="About The Aurelia"
+      aria-label="About Charlie Hamiltons Pub"
     >
       <div
         ref={containerRef}
@@ -101,7 +101,7 @@ export default function IntroSection() {
               textTransform: 'uppercase',
               color:         'var(--color-muted, #9a948c)',
             }}>
-              — Chef Arjun Mehta, Founder
+              — Chef Arjun Mehta
             </span>
           </motion.div>
         </div>
@@ -194,7 +194,7 @@ function ImageStack({ imageY }: { imageY: import('framer-motion').MotionValue<nu
       >
         <Image
           src="/images/main.jpg"
-          alt="The Aurelia dining room — warm candlelit atmosphere"
+          alt="Charlie Hamiltons Pub — warm and inviting atmosphere"
           fill
           style={{ objectFit: 'cover' }}
           sizes="(max-width: 768px) 100vw, 45vw"
@@ -216,7 +216,7 @@ function ImageStack({ imageY }: { imageY: import('framer-motion').MotionValue<nu
       >
         <Image
           src="/images/detail.jpg"
-          alt="Signature dish — exquisite plating at The Aurelia"
+          alt="Signature dish — exquisite plating at Charlie Hamiltons Pub"
           fill
           style={{ objectFit: 'cover' }}
           sizes="(max-width: 768px) 50vw, 22vw"
@@ -258,8 +258,8 @@ function TextContent() {
           marginBottom:  '1.5rem',
         }}
       >
-        A Legacy of <br />
-        <em>Fine Spirits &amp; Warm Hospitality</em>
+        A Neighborhood <br />
+        <em>Pub &amp; Sports Bar</em>
       </h2>
 
       {/* Gold divider line */}
@@ -284,7 +284,7 @@ function TextContent() {
           maxWidth:     '480px',
         }}
       >
-        Since 1897, Charlie Hamilton has been the heart of Chelsea&apos;s social scene. What began as a humble ale house on King&apos;s Road has evolved into one of London&apos;s most cherished pubs — a place where tradition meets craftsmanship, and every glass tells a story.
+        Charlie Hamiltons Pub is Coquitlam&apos;s favorite neighborhood-style pub and sports bar. Located inside Henderson Place Mall, we are known for our casual atmosphere, happy hour deals, and a friendly local crowd.
       </p>
 
       <p
@@ -297,7 +297,7 @@ function TextContent() {
           maxWidth:   '480px',
         }}
       >
-        Our bar showcases over 50 premium whiskeys from Scotland&apos;s finest distilleries, alongside 12 rotating craft beers brewed exclusively for us. Whether you&apos;re here for a quiet evening by the fire or a lively night with friends, Charlie Hamilton welcomes you home.
+        Enjoy great drinks and beer specials, catch up on sports and play darts, or dig into our delicious pub-style food. Whether you&apos;re here to watch the big game or unwind with friends, Charlie Hamiltons welcomes you.
       </p>
 
       {/* CTA */}

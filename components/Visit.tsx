@@ -82,21 +82,21 @@ function InfoGrid() {
             <ExtraInfoBlock
               icon={<ShirtIcon />}
               title="Dress Code"
-              body="Smart casual is warmly welcomed. We ask that guests refrain from sportswear and athletic footwear. Come as you are — just leave the gym kit at home."
+              body="Casual and comfortable. We welcome everyone in our friendly neighborhood atmosphere — come as you are to enjoy the game."
             />
           </Reveal>
           <Reveal delay={150}>
             <ExtraInfoBlock
               icon={<CarIcon />}
               title="Parking"
-              body="On-street parking is available along King's Road (pay & display). The nearest car park is the Chelsea Car Park on Flood Street, a 2-minute walk."
+              body="Ample parking is available right at Henderson Place Mall. Easy access and convenience for all our guests."
             />
           </Reveal>
           <Reveal delay={300}>
             <ExtraInfoBlock
               icon={<MetroIcon />}
-              title="By Tube"
-              body="We are a 5-minute walk from Sloane Square station on the District and Circle lines. Exit onto King's Road and head west."
+              title="Transit"
+              body="Located near Lincoln Station on the SkyTrain line, making it incredibly accessible via public transit from anywhere in Coquitlam."
             />
           </Reveal>
         </div>
@@ -139,7 +139,7 @@ function MapSection() {
                 Go to maps.google.com → search address → Share → Embed a map → copy the src
               */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.5!2d-0.1683!3d51.4905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876055e3f3d0a5f%3A0x4c7bcdedc0b5c1f!2sKing%27s%20Rd%2C%20Chelsea%2C%20London!5e0!3m2!1sen!2suk!4v1620000000000!5m2!1sen!2suk"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.83615438885!2d-122.79532588431326!3d49.27949357933108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867f2bc2922ef1%3A0xe54e63f538e146aa!2sCharlie%20Hamiltons%20Pub!5e0!3m2!1sen!2sca!4v1650000000000!5m2!1sen!2sca"
                 width="100%"
                 height="100%"
                 style={{
@@ -151,7 +151,7 @@ function MapSection() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Charlie Hamilton location"
+                title="Charlie Hamiltons Pub location"
               />
               {/* Gold corner accents */}
               {(['topLeft','topRight','bottomLeft','bottomRight'] as const).map(pos => (
@@ -173,7 +173,7 @@ function MapSection() {
                 letterSpacing: '0.01em',
                 marginBottom:  '1.5rem',
               }}>
-                Find Us on <em>King&apos;s Road</em>
+                Find Us in <em>Henderson Place Mall</em>
               </h2>
 
               <span style={{
@@ -185,7 +185,7 @@ function MapSection() {
               }} />
 
               <address style={{ fontStyle: 'normal', marginBottom: '1.75rem' }}>
-                {['Charlie Hamilton', '42 King\'s Road', 'Chelsea, London', 'SW3 4ND'].map((line, i) => (
+                {['Charlie Hamiltons', '1163 Pinetree Way #1031', 'Coquitlam, BC', 'V3B 8A9'].map((line, i) => (
                   <p key={i} style={{
                     fontFamily:    i === 0 ? 'var(--font-serif, Cormorant Garamond)' : 'var(--font-sans, Montserrat)',
                     fontSize:      i === 0 ? '1.1rem' : '0.8rem',
@@ -201,9 +201,9 @@ function MapSection() {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', marginBottom: '2rem' }}>
                 {[
-                  { icon: '🚇', label: '5 min walk from Sloane Square Tube' },
-                  { icon: '🚌', label: 'Bus 11, 22, 211 stop outside' },
-                  { icon: '🅿️', label: 'On-street parking on King\'s Road' },
+                  { icon: '🚇', label: 'Near Lincoln Station (SkyTrain)' },
+                  { icon: '📍', label: 'Inside Henderson Place Mall' },
+                  { icon: '🅿️', label: 'Mall parking available' },
                 ].map(item => (
                   <div key={item.label} style={{ display: 'flex', gap: '0.6rem', alignItems: 'center' }}>
                     <span style={{ fontSize: '0.85rem' }}>{item.icon}</span>
@@ -221,7 +221,7 @@ function MapSection() {
               </div>
 
               <a
-                href="https://maps.google.com/?q=42+Kings+Road+Chelsea+London+SW3+4ND"
+                href="https://maps.google.com/?q=1163+Pinetree+Way+Coquitlam+BC+V3B+8A9"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -332,18 +332,17 @@ function ContactStrip() {
 
 /* ── DATA ───────────────────────────────────────────────── */
 const HOURS = [
-  { day: 'Monday – Thursday', time: '4PM – 12AM'  },
-  { day: 'Friday – Saturday', time: '12PM – 2AM'  },
-  { day: 'Sunday',            time: '12PM – 11PM' },
+  { day: 'Sunday – Thursday', time: '11 AM – 1 AM'  },
+  { day: 'Friday – Saturday', time: '11 AM – 2 AM'  },
 ]
 
 const CONTACT_ITEMS = [
   {
     icon:   <PhoneIcon color="#c9a96e" size={28} />,
     label:  'Telephone',
-    value:  '+44 20 7946 0958',
+    value:  '+1 604-941-2359',
     sub:    'Reservations welcome',
-    href:   'tel:+442079460958',
+    href:   'tel:+16049412359',
     action: 'Call Now',
   },
   {
@@ -422,7 +421,7 @@ function AddressBlock() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
       <address style={{ fontStyle: 'normal' }}>
-        {['42 King\'s Road', 'Chelsea, London', 'SW3 4ND'].map(line => (
+        {['1163 Pinetree Way #1031', 'Coquitlam, BC', 'V3B 8A9'].map(line => (
           <p key={line} style={{
             fontFamily:    'var(--font-serif, Cormorant Garamond)',
             fontSize:      '1.05rem',
@@ -436,9 +435,9 @@ function AddressBlock() {
         ))}
       </address>
       {[
-        { icon: '🚇', text: 'Sloane Square Tube — 5 min walk' },
-        { icon: '🚌', text: 'Bus 11, 22, 211 stop outside'    },
-        { icon: '🅿️', text: 'Chelsea Car Park — 2 min walk'   },
+        { icon: '🚇', text: 'Lincoln Station (SkyTrain) — nearby' },
+        { icon: '📍', text: 'Henderson Place Mall'    },
+        { icon: '🅿️', text: 'Mall Parking — available'   },
       ].map(item => (
         <div key={item.text} style={{ display: 'flex', gap: '0.6rem', alignItems: 'center' }}>
           <span style={{ fontSize: '0.8rem' }}>{item.icon}</span>
@@ -454,7 +453,7 @@ function AddressBlock() {
         </div>
       ))}
       <a
-        href="https://maps.google.com/?q=42+Kings+Road+Chelsea+London+SW3+4ND"
+        href="https://maps.google.com/?q=1163+Pinetree+Way+Coquitlam+BC+V3B+8A9"
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -484,7 +483,7 @@ function ContactBlock() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
       {[
-        { label: 'Telephone',    value: '+44 20 7946 0958',          href: 'tel:+442079460958' },
+        { label: 'Telephone',    value: '+1 604-941-2359',          href: 'tel:+16049412359' },
         { label: 'Email',        value: 'hello@charliehamilton.pub', href: 'mailto:hello@charliehamilton.pub' },
         { label: 'Reservations', value: 'Book a Table',              href: '#reservations' },
       ].map((item, i, arr) => (

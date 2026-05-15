@@ -89,7 +89,7 @@ export default function Navbar() {
             alignItems:       'center',
             justifyContent:   'space-between',
             padding:          '1.5rem clamp(1.5rem, 7vw, 3.5rem)',
-            borderBottom:     scrolled ? '1px solid rgba(255,255,255,0.05)' : '1px solid rgba(255,255,255,0.08)',
+            borderBottom:     scrolled ? '1px solid rgba(255,255,255,0.05)' : 'none',
             boxSizing:        'border-box',
           }}
         >
@@ -97,12 +97,13 @@ export default function Navbar() {
           <span
             style={{
               fontFamily:    'var(--font-sans, Montserrat)',
-              fontSize:      '0.75rem',
+              fontSize:      '0.8rem',
               fontWeight:    1000,
               letterSpacing: '0.28em',
               textTransform: 'uppercase',
               color:         '#ffffffff',
-              opacity:       0.7,
+              textShadow:    '0 2px 4px rgba(0,0,0,0.6)',
+              opacity:       0.8,
               padding:       '1.1rem 2.5rem',
               paddingBottom: '5px',
               marginBottom: '5px',
@@ -116,15 +117,16 @@ export default function Navbar() {
           <Link
             href="/"
             style={{ textDecoration: 'none', position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}
-            aria-label="The Aurelia — Home"
+            aria-label="Charlie Hamiltons Pub — Home"
           >
             <span
               style={{
                 fontFamily:    'var(--font-serif, Cormorant Garamond)',
-                fontSize:      '1.75rem',
+                fontSize:      '1.9rem',
                 fontWeight:    800,
                 letterSpacing: '0.14em',
                 color:         'var(--color-white, #fff)',
+                textShadow:    '0 2px 8px rgba(0,0,0,0.6)',
                 lineHeight:    1.3,
                 whiteSpace:    'nowrap',
                 display:       'inline-block',
@@ -142,11 +144,12 @@ export default function Navbar() {
             href="#contact"
             style={{
               fontFamily:    'var(--font-sans, Montserrat)',
-              fontSize:      '0.95rem',
+              fontSize:      '1rem',
               fontWeight:    800,
               letterSpacing: '0.22em',
               textTransform: 'uppercase',
               color:         'rgba(255, 255, 255, 1)',
+              textShadow:    '0 2px 6px rgba(0,0,0,0.5)',
               transition:    'color 0.3s ease',
               padding:       '1.1rem 2.5rem',
               paddingBottom: '5px',
@@ -192,10 +195,11 @@ export default function Navbar() {
             <span
               style={{
                 fontFamily:    'var(--font-serif, Cormorant Garamond)',
-                fontSize:      '1.15rem',
+                fontSize:      '1.25rem',
                 fontWeight:    700,
                 letterSpacing: '0.1em',
                 color:         '#ffffff',
+                textShadow:    '0 2px 6px rgba(0,0,0,0.5)',
                 lineHeight:    1,
                 whiteSpace:    'nowrap',
               }}
@@ -231,7 +235,7 @@ export default function Navbar() {
               right:          'clamp(1.5rem, 4vw, 3.5rem)',
               fontFamily:     'var(--font-sans, Montserrat)',
               fontSize:       '0.575rem',
-              fontWeight:     500,
+              fontWeight:     900,
               letterSpacing:  '0.22em',
               textTransform:  'uppercase',
               color:          '#0d0d0d',
@@ -240,6 +244,7 @@ export default function Navbar() {
               padding:        '0.5rem 1.3rem',
               transition:     'background 0.3s ease, color 0.3s ease',
               whiteSpace:     'nowrap',
+              borderRadius: '50px',
             }}
             className="nav-reserve-btn"
             onMouseEnter={e => {
@@ -309,11 +314,12 @@ function NavLinkEl({ href, label }: NavLinkItem) {
       href={href}
       style={{
         fontFamily:    'var(--font-sans, Montserrat)',
-        fontSize:      '0.6rem',
-        fontWeight:    400,
+        fontSize:      '0.7rem',
+        fontWeight:    600,
         letterSpacing: '0.22em',
         textTransform: 'uppercase',
-        color:         'rgba(255,255,255,0.75)',
+        color:         'rgba(255,255,255,0.9)',
+        textShadow:    '0 2px 6px rgba(0,0,0,0.5)',
         position:      'relative',
         paddingBottom: '3px',
         transition:    'color 0.3s ease',
@@ -324,7 +330,7 @@ function NavLinkEl({ href, label }: NavLinkItem) {
         if (line) { line.style.transform = 'scaleX(1)'; line.style.opacity = '1' }
       }}
       onMouseLeave={e => {
-        ;(e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.75)'
+        ;(e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.9)'
         const line = e.currentTarget.querySelector('.nav-line') as HTMLElement
         if (line) { line.style.transform = 'scaleX(0)'; line.style.opacity = '0' }
       }}

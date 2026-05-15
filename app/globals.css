@@ -1,5 +1,5 @@
 /* ============================================================
-   GLOBALS.CSS — The Aurelia Restaurant
+   GLOBALS.CSS — Charlie Hamiltons Pub
    Design system inspired by The Connaught (maybourne.com)
    ============================================================ */
 
@@ -107,6 +107,7 @@ body {
   background-color: var(--color-ivory);
   overflow-x: hidden;
   line-height: 1.6;
+  position: relative;
 }
 
 img,

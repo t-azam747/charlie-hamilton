@@ -169,8 +169,8 @@ export default function Hero() {
         }}
         aria-hidden="true"
       >
-        <source src="/videos/hero.mp4"  type="video/mp4" />
-        <source src="/videos/hero.webm" type="video/webm" />
+        <source src="https://res.cloudinary.com/dohe1tk9v/video/upload/f_auto,q_auto/v1778850699/main_lvs8t7.mp4"  type="video/mp4" />
+        <source src="/videos/main.webm" type="video/webm" />
       </video>
 
       {/* Fallback bg — shown while video loads */}
@@ -178,7 +178,7 @@ export default function Hero() {
         style={{
           position:  'absolute',
           inset:     0,
-          background:'url(/images/hero-fallback.jpg) center/cover no-repeat',
+          background:'url(/images/main-fallback.jpg) center/cover no-repeat',
           zIndex:    0,
           opacity:   videoReady ? 0 : 1,
           transition:'opacity 1.2s ease',
@@ -194,10 +194,9 @@ export default function Hero() {
           zIndex:    1,
           background:`
             linear-gradient(to bottom,
-              rgba(13,13,13,0.1)  0%,
-              rgba(13,13,13,0.0)  30%,
-              rgba(13,13,13,0.4)  70%,
-              rgba(13,13,13,0.72) 100%
+              rgba(0,0,0,0.45) 0%,
+              rgba(0,0,0,0.65) 75%,
+              rgba(0,0,0,0.70) 100%
             )
           `,
         }}
@@ -215,7 +214,7 @@ export default function Hero() {
         style={{
           position:      'absolute',
           inset:         `${initPad}px`,
-          border:        '1px solid rgba(255, 255, 255, 0.5)',
+          border:        'none',
           zIndex:        3,
           pointerEvents: 'none',
           opacity:       0,        // entrance animation fades it in
@@ -246,16 +245,16 @@ export default function Hero() {
         <span
           style={{
             fontFamily:    'var(--font-sans, Montserrat)',
-            fontSize:      '0.8rem',
-            fontWeight:    800,
+            fontSize:      '0.95rem',
+            fontWeight:    1000,
             letterSpacing: '0.42em',
             textTransform: 'uppercase',
-            color:         'rgba(255,255,255,0.55)',
+            color:         'rgba(255, 255, 255, 1)',
             marginBottom:  '1.5rem',
             display:       'block',
           }}
         >
-          London · Est. 1897
+          Coquitlam, BC
         </span>
 
         {/* Main heading */}
@@ -263,16 +262,17 @@ export default function Hero() {
           ref={headingRef}
           style={{
             fontFamily:    'var(--font-serif, Cormorant Garamond)',
-            fontSize:      'clamp(4rem, 10vw, 9rem)',
+            fontSize:      'clamp(4rem, 8vw, 7rem)',
             fontWeight:    300,
             color:         '#ffffff',
+            textShadow:    '0 2px 12px rgba(0,0,0,0.6)',
             lineHeight:    1.0,
             letterSpacing: '0.04em',
             marginBottom:  '1.5rem',
             maxWidth:      '1300px',
           }}
         >
-          Charlie Hamilton
+          Charlie Hamiltons Pub
         </h1>
 
         {/* Italic sub */}
@@ -280,10 +280,10 @@ export default function Hero() {
           ref={subRef}
           style={{
             fontFamily:    'var(--font-serif, Cormorant Garamond)',
-            fontSize:      'clamp(1rem, 2vw, 1.4rem)',
-            fontWeight:    800,
+            fontSize:      '25px',
+            fontWeight:    500,
             fontStyle:     'italic',
-            color:         'rgba(255,255,255,0.62)',
+            color:         'rgba(255, 255, 255, 1)',
             letterSpacing: '0.04em',
             maxWidth:      '600px',
             lineHeight:    1.7,
@@ -292,7 +292,7 @@ export default function Hero() {
             transform:     'translateY(18px)',
           }}
         >
-          A timeless public house where craft, conversation, and candlelight come together in the heart of the city.
+          A neighborhood-style pub and sports bar where craft, conversation, and sports come together.
         </p>
 
         {/* CTA buttons */}
@@ -305,9 +305,9 @@ export default function Hero() {
             justifyContent: 'center',
             opacity:        0,
             transform:      'translateY(16px)',
-          }}
+            }}
         >
-          <HeroBtn href="#reservations" variant="gold">Reserve a Table</HeroBtn>
+          <HeroBtn  href="#reservations" variant="gold">Reserve a Table</HeroBtn>
           <HeroBtn href="#menu"         variant="ghost">Explore Menu</HeroBtn>
         </div>
       </div>
@@ -369,7 +369,7 @@ export default function Hero() {
           zIndex:   4,
         }}
       >
-        <InfoChip label="Location" value="42 King's Road, Chelsea" />
+        <InfoChip label="Location" value="1163 Pinetree Way, Coquitlam" />
       </div>
       <div
         style={{
@@ -380,7 +380,7 @@ export default function Hero() {
           textAlign: 'right',
         }}
       >
-        <InfoChip label="Hours" value="12pm – 11pm Daily" />
+        <InfoChip label="Hours" value="11 AM – 1 AM Sun-Thu" />
       </div>
 
       {/* ── KEYFRAMES ───────────────────────────────────── */}
@@ -412,19 +412,20 @@ function HeroBtn({
       style={{
         fontFamily:     'var(--font-sans, Montserrat)',
         fontSize:       '0.6rem',
-        fontWeight:     500,
+        fontWeight:     900,
         letterSpacing:  '0.22em',
         textTransform:  'uppercase',
         color:          isGold ? '#0d0d0d' : '#ffffff',
-        background:     isGold ? 'var(--color-gold, #c9a96e)' : 'transparent',
+        background:     isGold ? 'var(--color-gold, #c9a96e)' : 'rgba(255,255,255,0.12)',
         border:         isGold
                           ? '1px solid var(--color-gold, #c9a96e)'
-                          : '1px solid rgba(255,255,255,0.4)',
+                          : '1.5px solid rgba(255,255,255,0.7)',
         padding:        '0.85rem 2.25rem',
         transition:     'background 0.3s ease, color 0.3s ease, border-color 0.3s ease',
         whiteSpace:     'nowrap',
         textDecoration: 'none',
         display:        'inline-block',
+        borderRadius:   '55px',
       }}
       onMouseEnter={e => {
         const el = e.currentTarget as HTMLElement
@@ -437,8 +438,8 @@ function HeroBtn({
       }}
       onMouseLeave={e => {
         const el = e.currentTarget as HTMLElement
-        el.style.background  = isGold ? 'var(--color-gold, #c9a96e)' : 'transparent'
-        el.style.borderColor = isGold ? 'var(--color-gold, #c9a96e)' : 'rgba(255,255,255,0.4)'
+        el.style.background  = isGold ? 'var(--color-gold, #c9a96e)' : 'rgba(255,255,255,0.12)'
+        el.style.borderColor = isGold ? 'var(--color-gold, #c9a96e)' : 'rgba(255,255,255,0.7)'
         el.style.color       = isGold ? '#0d0d0d' : '#ffffff'
       }}
     >
@@ -458,14 +459,15 @@ function InfoChip({ label, value }: { label: string; value: string }) {
         textTransform: 'uppercase',
         color:         'var(--color-gold, #c9a96e)',
         marginBottom:  '0.2rem',
+        fontWeight:    900,
       }}>
         {label}
       </p>
       <p style={{
         fontFamily:    'var(--font-serif, Cormorant Garamond)',
         fontSize:      '0.9rem',
-        fontWeight:    300,
-        color:         'rgba(255,255,255,0.52)',
+        fontWeight:    1200,
+        color:         'rgba(255, 255, 255, 1)',
         letterSpacing: '0.04em',
       }}>
         {value}

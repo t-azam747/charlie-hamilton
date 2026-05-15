@@ -79,9 +79,8 @@ const SOCIALS = [
 ]
 
 const HOURS = [
-  { day: 'Monday – Thursday', time: '12pm – 11pm' },
-  { day: 'Friday – Saturday', time: '12pm – 1am' },
-  { day: 'Sunday',            time: '12pm – 10pm' },
+  { day: 'Sunday – Thursday', time: '11 AM – 1 AM' },
+  { day: 'Friday – Saturday', time: '11 AM – 2 AM' },
 ]
 
 /* ── REVEAL HOOK ─────────────────────────────────────────── */
@@ -268,7 +267,7 @@ export default function Footer() {
         {/* Column 1 — Brand */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           {/* Logo */}
-          <Link href="/" aria-label="The Aurelia — Home" style={{ textDecoration: 'none' }}>
+          <Link href="/" aria-label="Charlie Hamiltons Pub — Home" style={{ textDecoration: 'none' }}>
             <span
               style={{
                 fontFamily:    'var(--font-serif, Cormorant Garamond)',
@@ -280,7 +279,7 @@ export default function Footer() {
               }}
             >
               Charlie&nbsp;
-              <span style={{ color: 'var(--color-gold, #c9a96e)' }}>Hamilton</span>
+              <span style={{ color: 'var(--color-gold, #c9a96e)' }}>Hamiltons</span>
             </span>
           </Link>
 
@@ -382,15 +381,15 @@ A timeless public house where craft, conversation, and candlelight come together
               marginBottom: '1.25rem',
             }}
           >
-            42 King's Road<br />
-            Chelsea, London<br />
-            SW3 4ND
+            1163 Pinetree Way #1031<br />
+            Coquitlam, BC<br />
+            V3B 8A9, Canada
           </address>
 
           {/* Phone + Email */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', marginBottom: '1.5rem' }}>
             <a
-              href="tel:+911234567890"
+              href="tel:+16049412359"
               style={{
                 fontFamily:    'var(--font-sans, Montserrat)',
                 fontSize:      '0.7rem',
@@ -402,7 +401,7 @@ A timeless public house where craft, conversation, and candlelight come together
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-gold, #c9a96e)' }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.45)' }}
             >
-              +44 20 7946 0958
+              +1 604-941-2359
             </a>
             <a
               href="mailto:hello@charliehamilton.pub"
@@ -475,7 +474,7 @@ A timeless public house where craft, conversation, and candlelight come together
               letterSpacing: '0.08em',
             }}
           >
-            © {new Date().getFullYear()} The Aurelia. All rights reserved.
+            © {new Date().getFullYear()} Charlie Hamiltons Pub. All rights reserved.
           </p>
 
           <div

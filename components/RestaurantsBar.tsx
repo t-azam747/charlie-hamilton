@@ -26,7 +26,7 @@ const SPACES = [
     id:          '02',
     category:    'House Brew',
     name:        'Charlie\'s Craft Ale',
-    description: 'Brewed exclusively for us by a local London brewery. A golden, full-bodied ale with notes of citrus and caramel.',
+    description: 'Brewed exclusively for us by a local BC brewery. A golden, full-bodied ale with notes of citrus and caramel.',
     capacity:    '',
     hours:       '$7',
     image:       '/images/cocktail-2.jpg',
