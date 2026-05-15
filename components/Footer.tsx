@@ -296,11 +296,10 @@ export default function Footer() {
             style={{
               fontFamily:  'var(--font-sans, Montserrat)',
               fontSize:    '0.7rem',
-              fontWeight:  300,
+              fontWeight:  500,
               color:       'rgba(255,255,255,1)',
               lineHeight:  1.9,
               maxWidth:    '240px',
-              fontWeight:  500,
             }}
           >
 A timeless public house where craft, conversation, and candlelight come together in the heart of the city.          </p>
