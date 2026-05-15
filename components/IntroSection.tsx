@@ -101,7 +101,7 @@ export default function IntroSection() {
               textTransform: 'uppercase',
               color:         'var(--color-muted, #9a948c)',
             }}>
-              — Chef Arjun Mehta
+              — Charlie Hamiltons Pub
             </span>
           </motion.div>
         </div>
@@ -193,7 +193,7 @@ function ImageStack({ imageY }: { imageY: import('framer-motion').MotionValue<nu
         className="img-zoom-wrap"
       >
         <Image
-          src="/images/main.jpg"
+          src="/images/pub-main.png"
           alt="Charlie Hamiltons Pub — warm and inviting atmosphere"
           fill
           style={{ objectFit: 'cover' }}
@@ -215,7 +215,7 @@ function ImageStack({ imageY }: { imageY: import('framer-motion').MotionValue<nu
         className="img-zoom-wrap"
       >
         <Image
-          src="/images/detail.jpg"
+          src="/images/dish-03.jpg"
           alt="Signature dish — exquisite plating at Charlie Hamiltons Pub"
           fill
           style={{ objectFit: 'cover' }}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 /* ── TYPES ──────────────────────────────────────────────── */
 interface NavLinkItem {
@@ -94,24 +95,23 @@ export default function Navbar() {
           }}
         >
           {/* Left — branding tag */}
-          <span
+          <div
             style={{
-              fontFamily:    'var(--font-sans, Montserrat)',
-              fontSize:      '0.8rem',
-              fontWeight:    1000,
-              letterSpacing: '0.28em',
-              textTransform: 'uppercase',
-              color:         '#ffffffff',
-              textShadow:    '0 2px 4px rgba(0,0,0,0.6)',
+              position:      'relative',
+              width:         '60px',
+              height:        '60px',
               opacity:       0.8,
-              padding:       '1.1rem 2.5rem',
-              paddingBottom: '5px',
-              marginBottom: '5px',
+              marginLeft:    '2.5rem',
             }}
             className="topbar-side"
           >
-            Est. 1897
-          </span>
+            <Image
+              src="/images/logo.png"
+              alt="Charlie Hamiltons Pub Logo"
+              fill
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
 
           {/* Centre — Logo */}
           <Link

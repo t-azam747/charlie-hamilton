@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 /* ── DATA ────────────────────────────────────────────────── */
 const NAV_COLUMNS = [
@@ -169,8 +170,8 @@ export default function Footer() {
               style={{
                 fontFamily:  'var(--font-sans, Montserrat)',
                 fontSize:    '0.75rem',
-                fontWeight:  300,
-                color:       'rgba(255,255,255,0.4)',
+                fontWeight:  500,
+                color:       'rgba(255, 255, 255, 1)',
                 lineHeight:  1.8,
                 marginTop:   '0.5rem',
               }}
@@ -201,7 +202,7 @@ export default function Footer() {
                 flex:          '1 1 200px',
                 fontFamily:    'var(--font-sans, Montserrat)',
                 fontSize:      '0.75rem',
-                fontWeight:    300,
+                fontWeight:    500,
                 padding:       '0.85rem 1.25rem',
                 background:    'rgba(255,255,255,0.05)',
                 border:        '1px solid rgba(255,255,255,0.12)',
@@ -267,7 +268,15 @@ export default function Footer() {
         {/* Column 1 — Brand */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           {/* Logo */}
-          <Link href="/" aria-label="Charlie Hamiltons Pub — Home" style={{ textDecoration: 'none' }}>
+          <Link href="/" aria-label="Charlie Hamiltons Pub — Home" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{ position: 'relative', width: '100px', height: '100px' }}>
+              <Image 
+                src="/images/logo-footer.png" 
+                alt="Charlie Hamiltons Pub Logo" 
+                fill 
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
             <span
               style={{
                 fontFamily:    'var(--font-serif, Cormorant Garamond)',
@@ -288,9 +297,10 @@ export default function Footer() {
               fontFamily:  'var(--font-sans, Montserrat)',
               fontSize:    '0.7rem',
               fontWeight:  300,
-              color:       'rgba(255,255,255,0.4)',
+              color:       'rgba(255,255,255,1)',
               lineHeight:  1.9,
               maxWidth:    '240px',
+              fontWeight:  500,
             }}
           >
 A timeless public house where craft, conversation, and candlelight come together in the heart of the city.          </p>
@@ -311,7 +321,7 @@ A timeless public house where craft, conversation, and candlelight come together
                   width:        '36px',
                   height:       '36px',
                   border:       '1px solid rgba(255,255,255,0.1)',
-                  color:        'rgba(255,255,255,0.45)',
+                  color:        'rgba(255,255,255,0.8)',
                   transition:   'color 0.3s ease, border-color 0.3s ease, background 0.3s ease',
                 }}
                 onMouseEnter={e => {
@@ -322,7 +332,7 @@ A timeless public house where craft, conversation, and candlelight come together
                 }}
                 onMouseLeave={e => {
                   const el = e.currentTarget
-                  el.style.color       = 'rgba(255,255,255,0.45)'
+                  el.style.color       = 'rgba(255,255,255,0.8)'
                   el.style.borderColor = 'rgba(255,255,255,0.1)'
                   el.style.background  = 'transparent'
                 }}
@@ -345,8 +355,8 @@ A timeless public house where craft, conversation, and candlelight come together
                     style={{
                       fontFamily:    'var(--font-sans, Montserrat)',
                       fontSize:      '0.7rem',
-                      fontWeight:    300,
-                      color:         'rgba(255,255,255,0.45)',
+                      fontWeight:    500,
+                      color:         'rgba(255,255,255,0.9)',
                       transition:    'color 0.3s ease',
                       letterSpacing: '0.04em',
                     }}
@@ -354,7 +364,7 @@ A timeless public house where craft, conversation, and candlelight come together
                       (e.currentTarget as HTMLElement).style.color = 'var(--color-gold, #c9a96e)'
                     }}
                     onMouseLeave={e => {
-                      (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.45)'
+                      (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.9)'
                     }}
                   >
                     {link.label}
@@ -374,8 +384,8 @@ A timeless public house where craft, conversation, and candlelight come together
             style={{
               fontFamily:  'var(--font-sans, Montserrat)',
               fontSize:    '0.7rem',
-              fontWeight:  300,
-              color:       'rgba(255,255,255,0.45)',
+              fontWeight:  500,
+              color:       'rgba(255,255,255,0.9)',
               lineHeight:  1.9,
               fontStyle:   'normal',
               marginBottom: '1.25rem',
@@ -393,13 +403,13 @@ A timeless public house where craft, conversation, and candlelight come together
               style={{
                 fontFamily:    'var(--font-sans, Montserrat)',
                 fontSize:      '0.7rem',
-                fontWeight:    300,
-                color:         'rgba(255,255,255,0.45)',
+                fontWeight:    500,
+                color:         'rgba(255,255,255,0.9)',
                 transition:    'color 0.3s ease',
                 letterSpacing: '0.04em',
               }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-gold, #c9a96e)' }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.45)' }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.9)' }}
             >
               +1 604-941-2359
             </a>
@@ -408,13 +418,13 @@ A timeless public house where craft, conversation, and candlelight come together
               style={{
                 fontFamily:    'var(--font-sans, Montserrat)',
                 fontSize:      '0.7rem',
-                fontWeight:    300,
-                color:         'rgba(255,255,255,0.45)',
+                fontWeight:    500,
+                color:         'rgba(255,255,255,0.9)',
                 transition:    'color 0.3s ease',
                 letterSpacing: '0.04em',
               }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-gold, #c9a96e)' }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.45)' }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.9)' }}
             >
               hello@charliehamilton.pub
             </a>
@@ -432,13 +442,13 @@ A timeless public house where craft, conversation, and candlelight come together
                   gap:            '1rem',
                   fontFamily:     'var(--font-sans, Montserrat)',
                   fontSize:       '0.65rem',
-                  fontWeight:     300,
-                  color:          'rgba(255,255,255,0.4)',
+                  fontWeight:     500,
+                  color:          'rgba(255,255,255,0.9)',
                   letterSpacing:  '0.02em',
                 }}
               >
                 <span>{h.day}</span>
-                <span style={{ color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap' }}>{h.time}</span>
+                <span style={{ color: '#ffffff', whiteSpace: 'nowrap' }}>{h.time}</span>
               </div>
             ))}
           </div>
@@ -469,8 +479,8 @@ A timeless public house where craft, conversation, and candlelight come together
             style={{
               fontFamily:    'var(--font-sans, Montserrat)',
               fontSize:      '0.6rem',
-              fontWeight:    300,
-              color:         'rgba(255,255,255,0.25)',
+              fontWeight:    500,
+              color:         'rgba(255,255,255,0.6)',
               letterSpacing: '0.08em',
             }}
           >
@@ -494,11 +504,11 @@ A timeless public house where craft, conversation, and candlelight come together
                   fontWeight:    400,
                   letterSpacing: '0.18em',
                   textTransform: 'uppercase',
-                  color:         'rgba(255,255,255,0.2)',
+                  color:         'rgba(255,255,255,0.6)',
                   transition:    'color 0.3s ease',
                 }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.5)' }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.2)' }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.6)' }}
               >
                 {item}
               </Link>
@@ -518,7 +528,7 @@ A timeless public house where craft, conversation, and candlelight come together
               fontWeight:   400,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color:        'rgba(255,255,255,0.25)',
+              color:        'rgba(255,255,255,0.6)',
               background:   'none',
               border:       'none',
               cursor:       'pointer',
@@ -526,7 +536,7 @@ A timeless public house where craft, conversation, and candlelight come together
               padding:      0,
             }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-gold, #c9a96e)' }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.25)' }}
+            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.6)' }}
           >
             Back to top
             <svg width="10" height="12" viewBox="0 0 10 12" fill="none" aria-hidden="true">
@@ -544,7 +554,7 @@ const eyebrowStyle: React.CSSProperties = {
   display:       'block',
   fontFamily:    'var(--font-sans, Montserrat)',
   fontSize:      '0.625rem',
-  fontWeight:    400,
+  fontWeight:    600,
   letterSpacing: '0.3em',
   textTransform: 'uppercase',
   color:         'var(--color-gold, #c9a96e)',
@@ -554,9 +564,9 @@ const eyebrowStyle: React.CSSProperties = {
 const columnHeadingStyle: React.CSSProperties = {
   fontFamily:    'var(--font-sans, Montserrat)',
   fontSize:      '0.6rem',
-  fontWeight:    500,
+  fontWeight:    800,
   letterSpacing: '0.22em',
   textTransform: 'uppercase',
-  color:         'rgba(255,255,255,0.7)',
+  color:         '#ffffff',
   marginBottom:  '1.25rem',
 }
