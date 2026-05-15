@@ -98,8 +98,8 @@ export default function Navbar() {
           <div
             style={{
               position:      'relative',
-              width:         '60px',
-              height:        '60px',
+              width:         '80px',
+              height:        '80px',
               opacity:       0.8,
               marginLeft:    '2.5rem',
             }}
