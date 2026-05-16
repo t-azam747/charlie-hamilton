@@ -348,7 +348,7 @@ const CONTACT_ITEMS = [
   {
     icon:   <MailIcon color="#c9a96e" size={28} />,
     label:  'Email',
-    value:  'hello@charliehamilton.pub',
+    value:  'charliehamiltonspub1@gmail.com',
     sub:    'We respond within 4 hours',
     href:   'mailto:charliehamiltonspub1@gmail.com',
     action: 'Send Email',
@@ -510,6 +510,8 @@ function ContactBlock() {
             letterSpacing:  '0.02em',
             textDecoration: 'none',
             transition:     'color 0.25s ease',
+            wordBreak:      'break-word',
+            overflowWrap:   'anywhere',
           }}
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-gold, #c9a96e)' }}
           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#ffffff' }}
@@ -642,7 +644,7 @@ function ContactCard({ item, delay }: { item: typeof CONTACT_ITEMS[number]; dela
       <span style={{ fontFamily: 'var(--font-sans, Montserrat)', fontSize: '0.55rem', fontWeight: 400, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.32)', marginBottom: '0.45rem', display: 'block' }}>
         {item.label}
       </span>
-      <span style={{ fontFamily: 'var(--font-serif, Cormorant Garamond)', fontSize: 'clamp(1.05rem, 2vw, 1.35rem)', fontWeight: 400, color: '#ffffff', letterSpacing: '0.02em', marginBottom: '0.35rem', display: 'block' }}>
+      <span style={{ fontFamily: 'var(--font-serif, Cormorant Garamond)', fontSize: 'clamp(1.05rem, 2vw, 1.35rem)', fontWeight: 400, color: '#ffffff', letterSpacing: '0.02em', marginBottom: '0.35rem', display: 'block', wordBreak: 'break-word', overflowWrap: 'anywhere' }}>
         {item.value}
       </span>
       <span style={{ fontFamily: 'var(--font-sans, Montserrat)', fontSize: '0.62rem', fontWeight: 300, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.03em', marginBottom: '1.25rem', display: 'block' }}>

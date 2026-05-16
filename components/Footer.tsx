@@ -421,11 +421,13 @@ A timeless public house where craft, conversation, and candlelight come together
                 color:         'rgba(255,255,255,0.9)',
                 transition:    'color 0.3s ease',
                 letterSpacing: '0.04em',
+                wordBreak:     'break-word',
+                overflowWrap:  'anywhere',
               }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-gold, #c9a96e)' }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.9)' }}
             >
-              hello@charliehamilton.pub
+              charliehamiltonspub1@gmail.com
             </a>
           </div>
 
