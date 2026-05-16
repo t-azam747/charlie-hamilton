@@ -350,7 +350,7 @@ const CONTACT_ITEMS = [
     label:  'Email',
     value:  'hello@charliehamilton.pub',
     sub:    'We respond within 4 hours',
-    href:   'mailto:hello@charliehamilton.pub',
+    href:   'mailto:charliehamiltonspub1@gmail.com',
     action: 'Send Email',
   },
   {
@@ -484,7 +484,7 @@ function ContactBlock() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
       {[
         { label: 'Telephone',    value: '+1 604-941-2359',          href: 'tel:+16049412359' },
-        { label: 'Email',        value: 'hello@charliehamilton.pub', href: 'mailto:hello@charliehamilton.pub' },
+        { label: 'Email',        value: 'charliehamiltonspub1@gmail.com', href: 'mailto:charliehamiltonspub1@gmail.com' },
         { label: 'Reservations', value: 'Book a Table',              href: '#reservations' },
       ].map((item, i, arr) => (
         <div key={item.label} style={{

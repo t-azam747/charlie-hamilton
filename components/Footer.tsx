@@ -413,7 +413,7 @@ A timeless public house where craft, conversation, and candlelight come together
               +1 604-941-2359
             </a>
             <a
-              href="mailto:hello@charliehamilton.pub"
+              href="mailto:charliehamiltonspub1@gmail.com"
               style={{
                 fontFamily:    'var(--font-sans, Montserrat)',
                 fontSize:      '0.7rem',
